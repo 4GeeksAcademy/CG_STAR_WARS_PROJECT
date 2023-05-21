@@ -1,15 +1,24 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import Carrousel from "../component/carrousel";
 
 export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
+	<div className="body">
+		<div className="first_carrousel">
+			<div className="row">
+				<h1 className="characters_title_home">Characters</h1>
+			</div>
+			<div className="row">
+				<Carrousel />
+			</div>
+		</div>
+		<div className="second_carrousel">
+			<div className="row">
+				<h1 className="characters_title_home">Planets</h1>
+			</div>
+			<div className="row">
+				<Carrousel />
+			</div>
+		</div>
 	</div>
 );
