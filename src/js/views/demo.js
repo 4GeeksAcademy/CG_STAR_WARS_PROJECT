@@ -10,33 +10,113 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
-			<br />
+			<div className="row">
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+			</div>
+			<div className="row">
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+			</div>
+			<div className="row">
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+				<div className="card_demo col 4 col-md-3">
+					<img src="..." class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Gender:</p>
+						<p className="card-text">Hair color:</p>
+						<p className="card-text">Skin color:</p>
+						<a href="#" className="btn btn-outline-warning">Learn more!</a>
+						<button className="like_demo btn-outline-warning"> ♥ </button>
+					</div>
+				</div>
+			</div>
 			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
+				<button className="btn_back_home btn-outline-warning">Back home</button>
 			</Link>
 		</div>
 	);

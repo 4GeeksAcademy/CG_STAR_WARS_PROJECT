@@ -1,0 +1,13 @@
+.card_demo {
+    margin: 15px;
+    width: 290px;
+    min-width: 290px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 0.25rem;
+}
+
+.like_demo {
+    margin-left: 80px;
+    border-radius: 5px;
+    background: none;
+}

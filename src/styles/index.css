@@ -12,42 +12,23 @@
     margin-right: 50px;
 }
 
-.carousel-item {
-    overflow-x: scroll;
-    white-space: nowrap;
-    margin-left: 30px;
-    padding-right: 20px;
-    border: 2px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: white;
-    padding-right: 30px;
-}
-
-.card {
-    margin: 20px;
-    width: 290px;
-    min-width: 290px;
-}
-
-.characters_title_home {
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: rgb(255, 242, 4);
-    text-shadow: 0 0 4px white;
-}
-
 .body_total {
     background-image: url("https://st4.depositphotos.com/18803028/29828/i/600/depositphotos_298282426-stock-photo-2d-illustration-deep-vast-space.jpg");
     padding-right: 30px;
 }
 
-.body {
-    margin-right: 30px;
-    margin: 50px;
+.like {
+    margin-left: 90px;
+    border-radius: 5px;
+    background: none;
 }
 
-.second_carrousel {
-    margin-top: 50px;
+.dropdown-menu {
+    background-color: #ffc107a3;
+}
+
+.btn_back_home {
+    margin-top: 20px;
+    background: none;
+    border-radius: 5px;
 }
