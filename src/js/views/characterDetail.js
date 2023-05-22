@@ -17,7 +17,7 @@ export const CharacterDetail = props => {
 					<h1 className="title_character_detail">{store.character.name}</h1>
 				</div>
 				<div className="row">
-					<div className="card">
+					<div className="visual_character_detail">
 						<img src="..." className="card-img-top" alt="..." />
 						<div className="card-body">
 							<button className="like btn-outline-warning"> ♥ </button>
