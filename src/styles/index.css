@@ -15,6 +15,12 @@
 .body_total {
     background-image: url("https://st4.depositphotos.com/18803028/29828/i/600/depositphotos_298282426-stock-photo-2d-illustration-deep-vast-space.jpg");
     padding-right: 30px;
+    padding-left: 30px;
+}
+.central {
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
 .like {

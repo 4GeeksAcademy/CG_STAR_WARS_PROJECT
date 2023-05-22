@@ -17,16 +17,16 @@ export const Home = () => {
 					<div className="carousel-item d-flex">
 						{store.characters.map((characters, index) => {
 								return (
-										<div className="card col 4 col-md-3" key={index}>
-											<img src="..." className="card-img-top" alt="..." />
-											<div className="card-body">
-												<h5 className="card-text">{characters.name}</h5>
-												<Link to= {`/characterdetail/${characters.uid}`} className="btn btn-outline-warning">
-													Learn more!
-												</Link>
-												<button className="like btn-outline-warning"> ♥ </button>
-											</div>
+									<div className="card col 4 col-md-3" key={index}>
+										<img src="..." className="card-img-top" alt="..." />
+										<div className="card-body">
+											<h5 className="card-text">{characters.name}</h5>
+											<Link to= {`/characterdetail/${characters.uid}`} className="btn btn-outline-warning">
+												Learn more!
+											</Link>
+											<button className="like btn-outline-warning"> ♥ </button>
 										</div>
+									</div>
 								)
 							}
 						)}
@@ -41,17 +41,17 @@ export const Home = () => {
 				<div className="row">
 					<div className="carousel-item d-flex">
 						{store.planets.map((planets, index) => {
-								return (
-										<div className="card col 4 col-md-3" key={index}>
-											<img src="..." className="card-img-top" alt="..." />
-											<div className="card-body">
-												<h5 className="card-text">{planets.name}</h5>
-												<a href="#" className="btn btn-outline-warning">Learn more!</a>
-												<button className="like btn-outline-warning"> ♥ </button>
-											</div>
-										</div>
-								)
-							}
+							return (
+								<div className="card col 4 col-md-3" key={index}>
+									<img src="..." className="card-img-top" alt="..." />
+									<div className="card-body">
+										<h5 className="card-text">{planets.name}</h5>
+										<a href="#" className="btn btn-outline-warning">Learn more!</a>
+										<button className="like btn-outline-warning"> ♥ </button>
+									</div>
+								</div>
+							)
+						}
 						)}
 					</div>
 				</div>
