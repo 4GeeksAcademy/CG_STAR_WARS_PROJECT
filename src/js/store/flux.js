@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			characters: []
+			characters: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -39,11 +39,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			loadCharacters: () => {
+			loadCharacters: (uid) => {
 				fetch("https://www.swapi.tech/api/people/")
 				.then (response => response.json())
 				.then ((response) => {
-					setStore ({characters: response.result})
+					console.log(response)
+					setStore({characters:response.results})
 				})
 			}
 		}

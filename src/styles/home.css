@@ -9,13 +9,18 @@
     border-radius: 10px;
     border-color: white;
     padding-right: 30px;
+    height: 300px;
 }
 
 .card {
     margin: 20px;
     width: 290px;
     min-width: 290px;
-    background-color:rgb(49, 49, 49)
+    background-color:rgb(49, 49, 49);
+}
+
+.card-text {
+    color: white;
 }
 
 .title_home {
