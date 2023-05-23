@@ -15,8 +15,16 @@ export const Characters = () => {
 							<img src={`https://starwars-visualguide.com/assets/img/characters/${index +1}.jpg`} class="card-img-top" alt="..." />
 							<div class="card-body">
 								<h5 className="card-title">{characters.name}</h5>
-								<a href="#" className="btn btn-outline-warning">Learn more!</a>
-								<button className="like_demo btn-outline-warning"> ♥ </button>
+								<Link to= {`/characterdetail/${characters.uid}`} className="btn btn-outline-warning">
+									Learn more!
+								</Link>
+								<button onClick={() => {
+									actions.setFavoritesCharacters(characters)
+								}} 
+								className="like btn-outline-warning"
+								> 
+								♥ 
+								</button>
 							</div>
 						</div>
 					)

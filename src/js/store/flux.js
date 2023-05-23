@@ -72,7 +72,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then (response => response.json())
 				.then ((response) => {
 					console.log(response.result.properties);
-					setStore({character: response.result})
+					setStore({character: response.result.properties})
 				})
 			},
 			getPlanet: (uid) => {
@@ -91,11 +91,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore ({vehicle: response.result.properties})
 				})
 			},
-			setFavorites: (character) => {
+			setFavoritesCharacters: (character) => {
 				const store = getStore()
 				console.log([...store.favorites, character])
 				setStore({favorites: [...store.favorites, character]})
-			}
+			},
+			setFavoritesPlanets: (planet) => {
+				const store = getStore()
+				console.log([...store.favorites, planet])
+				setStore({favorites: [...store.favorites, planet]})
+			},
+			setFavoritesVehicles: (vehicle) => {
+				const store = getStore()
+				console.log([...store.favorites, vehicle])
+				setStore({favorites: [...store.favorites, vehicle]})
+			},
+			deleteFavorite: (index) => {
+				const store = getStore();
+				const updatedFavorites = [...store.favorites];
+				updatedFavorites.splice(index, 1);
+				setStore({ favorites: updatedFavorites });
+			  }
 		}
 	};
 };

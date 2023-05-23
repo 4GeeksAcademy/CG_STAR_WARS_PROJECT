@@ -24,7 +24,7 @@ export const Home = () => {
 												Learn more!
 											</Link>
 											<button onClick={() => {
-												actions.setFavorites(characters)
+												actions.setFavoritesCharacters(characters)
 											}} 
 											className="like btn-outline-warning"
 											> 
@@ -53,7 +53,13 @@ export const Home = () => {
 										<Link to= {`/planetdetail/${planets.uid}`} className="btn btn-outline-warning">
 												Learn more!
 										</Link>
-										<button className="like btn-outline-warning"> ♥ </button>
+										<button onClick={() => {
+											actions.setFavoritesPlanets(planets)
+										}} 
+										className="like btn-outline-warning"
+										> 
+										♥ 
+										</button>
 									</div>
 								</div>
 							)
@@ -77,7 +83,13 @@ export const Home = () => {
 										<Link to= {`/vehicledetail/${vehicles.uid}`} className="btn btn-outline-warning">
 												Learn more!
 										</Link>
-										<button className="like btn-outline-warning"> ♥ </button>
+										<button onClick={() => {
+											actions.setFavoritesVehicles(vehicles)
+										}} 
+										className="like btn-outline-warning"
+										> 
+										♥ 
+										</button>
 									</div>
 								</div>
 							)

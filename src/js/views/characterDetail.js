@@ -14,15 +14,11 @@ export const CharacterDetail = props => {
 		<div className="body_total">
 			<div className="central">
 				<div className="row">
-					<h1 className="title_character_detail">{store.character.name}</h1>
+					<img src={`https://starwars-visualguide.com/assets/img/characters/${store.character.uid}.jpg`} className="card-img-top col 6 col-md-6" alt="..." />
+					<h1 className="title_character_detail col 6 col-md-6">{store.character.name}</h1>
 				</div>
 				<div className="row">
-					<div className="visual_character_detail">
-						<img src={`https://starwars-visualguide.com/assets/img/characters/${store.character.uid}.jpg`} className="card-img-top" alt="..." />
-						<div className="card-body">
-							<button className="like btn-outline-warning"> ♥ </button>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<Link to={"/"}>
