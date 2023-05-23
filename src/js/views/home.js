@@ -1,11 +1,10 @@
 import React, {useContext, useEffect} from "react";
 import "../../styles/home.css";
-import Carrousel from "../component/carrousel";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 
 export const Home = () => {
-	const {store} = useContext(Context)
+	const {store, actions} = useContext(Context)
 	const params = useParams();
 	return (
 		<div className="body">
@@ -24,7 +23,13 @@ export const Home = () => {
 											<Link to= {`/characterdetail/${characters.uid}`} className="btn btn-outline-warning">
 												Learn more!
 											</Link>
-											<button className="like btn-outline-warning"> ♥ </button>
+											<button onClick={() => {
+												actions.setFavorites(characters)
+											}} 
+											className="like btn-outline-warning"
+											> 
+											♥ 
+											</button>
 										</div>
 									</div>
 								)
@@ -42,7 +47,7 @@ export const Home = () => {
 						{store.planets.map((planets, index) => {
 							return (
 								<div className="card col 4 col-md-3" key={index}>
-									<img src={`https://starwars-visualguide.com/assets/img/planets/${index +1}.jpg`} className="card-img-top" alt="..." />
+									<img src={ index >0 ? `https://starwars-visualguide.com/assets/img/planets/${index +1}.jpg` : "https://zupimages.net/up/15/53/4ipd.png"} className="card-img-top" alt="..." />
 									<div className="card-body">
 										<h5 className="card-text">{planets.name}</h5>
 										<Link to= {`/planetdetail/${planets.uid}`} className="btn btn-outline-warning">
@@ -66,7 +71,7 @@ export const Home = () => {
 						{store.vehicles.map((vehicles, index) => {
 							return (
 								<div className="card col 4 col-md-3" key={index}>
-									<img src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 4}.jpg`} className="card-img-top" alt="..." />
+									<img src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 1}.jpg`} className="card-img-top" alt="..." />
 									<div className="card-body">
 										<h5 className="card-text">{vehicles.name}</h5>
 										<Link to= {`/vehicledetail/${vehicles.uid}`} className="btn btn-outline-warning">

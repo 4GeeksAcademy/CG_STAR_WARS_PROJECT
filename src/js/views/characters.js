@@ -12,7 +12,7 @@ export const Characters = () => {
 				{store.characters.map((characters, index) => {
 					return (
 						<div className="card_demo col 4 col-md-3" key={index}>
-							<img src="..." class="card-img-top" alt="..." />
+							<img src={`https://starwars-visualguide.com/assets/img/characters/${index +1}.jpg`} class="card-img-top" alt="..." />
 							<div class="card-body">
 								<h5 className="card-title">{characters.name}</h5>
 								<a href="#" className="btn btn-outline-warning">Learn more!</a>

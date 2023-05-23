@@ -18,7 +18,7 @@ export const CharacterDetail = props => {
 				</div>
 				<div className="row">
 					<div className="visual_character_detail">
-						<img src="..." className="card-img-top" alt="..." />
+						<img src={`https://starwars-visualguide.com/assets/img/characters/${store.character.uid}.jpg`} className="card-img-top" alt="..." />
 						<div className="card-body">
 							<button className="like btn-outline-warning"> ♥ </button>
 						</div>

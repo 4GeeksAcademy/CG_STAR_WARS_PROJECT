@@ -19,6 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			character: null,
 			planet: null,
 			vehicle: null,
+			favorites: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -71,7 +72,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then (response => response.json())
 				.then ((response) => {
 					console.log(response.result.properties);
-					setStore({character: response.result.properties})
+					setStore({character: response.result})
 				})
 			},
 			getPlanet: (uid) => {
@@ -79,7 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then (response => response.json())
 				.then ((response) => {
 					console.log(response.result.properties);
-					setStore({character: response.result.properties})
+					setStore({planet: response.result.properties})
 				})
 			},
 			getvehicle: (uid) => {
@@ -90,6 +91,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore ({vehicle: response.result.properties})
 				})
 			},
+			setFavorites: (character) => {
+				const store = getStore()
+				console.log([...store.favorites, character])
+				setStore({favorites: [...store.favorites, character]})
+			}
 		}
 	};
 };
