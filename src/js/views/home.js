@@ -18,7 +18,7 @@ export const Home = () => {
 						{store.characters.map((characters, index) => {
 								return (
 									<div className="card col 4 col-md-3" key={index}>
-										<img src="..." className="card-img-top" alt="..." />
+										<img src={`https://starwars-visualguide.com/assets/img/characters/${index +1}.jpg`} className="card-img-top" alt="..." />
 										<div className="card-body">
 											<h5 className="card-text">{characters.name}</h5>
 											<Link to= {`/characterdetail/${characters.uid}`} className="btn btn-outline-warning">
@@ -33,8 +33,7 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-			
-			<div className="second_carrousel">
+			<div className="rest_carrousels">
 				<div className="row">
 					<Link className="title_home" to= {`planets/`}>Planets</Link>
 				</div>
@@ -43,10 +42,36 @@ export const Home = () => {
 						{store.planets.map((planets, index) => {
 							return (
 								<div className="card col 4 col-md-3" key={index}>
-									<img src="..." className="card-img-top" alt="..." />
+									<img src={`https://starwars-visualguide.com/assets/img/planets/${index +1}.jpg`} className="card-img-top" alt="..." />
 									<div className="card-body">
 										<h5 className="card-text">{planets.name}</h5>
-										<a href="#" className="btn btn-outline-warning">Learn more!</a>
+										<Link to= {`/planetdetail/${planets.uid}`} className="btn btn-outline-warning">
+												Learn more!
+										</Link>
+										<button className="like btn-outline-warning"> ♥ </button>
+									</div>
+								</div>
+							)
+						}
+						)}
+					</div>
+				</div>
+			</div>
+			<div className="rest_carrousels">
+				<div className="row">
+					<Link className="title_home" to= {`vehicles/`}>Vehicles</Link>
+				</div>
+				<div className="row">
+					<div className="carousel-item d-flex">
+						{store.vehicles.map((vehicles, index) => {
+							return (
+								<div className="card col 4 col-md-3" key={index}>
+									<img src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 4}.jpg`} className="card-img-top" alt="..." />
+									<div className="card-body">
+										<h5 className="card-text">{vehicles.name}</h5>
+										<Link to= {`/vehicledetail/${vehicles.uid}`} className="btn btn-outline-warning">
+												Learn more!
+										</Link>
 										<button className="like btn-outline-warning"> ♥ </button>
 									</div>
 								</div>

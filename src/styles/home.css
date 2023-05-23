@@ -9,7 +9,7 @@
     border-radius: 10px;
     border-color: white;
     padding-right: 30px;
-    height: 300px;
+    height: 450px;
 }
 
 .card {
@@ -21,6 +21,7 @@
 
 .card-text {
     color: white;
+    margin-bottom: 15px;
 }
 
 .title_home {
@@ -38,6 +39,11 @@
     margin: 50px;
 }
 
-.second_carrousel {
+.rest_carrousels {
     margin-top: 50px;
+}
+
+
+.card-img-top {
+    height:300px;
 }

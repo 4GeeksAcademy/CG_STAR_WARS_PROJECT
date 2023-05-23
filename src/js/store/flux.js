@@ -15,7 +15,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			characters: [],
 			planets: [],
+			vehicles: [],
 			character: null,
+			planet: null,
+			vehicle: null,
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -55,6 +58,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({planets: response.results})
 				})
 			},
+			loadVehicles: () => {
+				fetch ("https://www.swapi.tech/api/vehicles/")
+				.then (response => response.json())
+				.then ((response) => {
+					console.log(response)
+					setStore({vehicles: response.results})
+				})
+			},
 			getCharacter: (uid) => {
 				fetch("https://www.swapi.tech/api/people/"+uid)
 				.then (response => response.json())
@@ -62,7 +73,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(response.result.properties);
 					setStore({character: response.result.properties})
 				})
-			}
+			},
+			getPlanet: (uid) => {
+				fetch("https://www.swapi.tech/api/planets/"+uid)
+				.then (response => response.json())
+				.then ((response) => {
+					console.log(response.result.properties);
+					setStore({character: response.result.properties})
+				})
+			},
+			getvehicle: (uid) => {
+				fetch("https://www.swapi.tech/api/vehicles/"+uid)
+				.then (response => response.json())
+				.then((response) => {
+					console.log(response.result.properties)
+					setStore ({vehicle: response.result.properties})
+				})
+			},
 		}
 	};
 };
