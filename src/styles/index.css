@@ -41,6 +41,40 @@
     border-radius: 5px;
 }
 
-.title_character_detail {
+.row_superior_detalle {
+    display: flex;
+    height: 500px;
+}
+
+.image_detalle{
+    height: 500px;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.descripcion {
     color: white;
+}
+
+.parrafo {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.titulo_detalle{
+    color: #ffc107a3;
+    text-shadow: 0 0 4px white;
+    text-align: center;
+}
+
+.row_inferior_detalle{
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    margin-top: 50px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    padding-top: 10px
 }
